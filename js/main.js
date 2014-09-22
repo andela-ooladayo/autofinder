@@ -16,7 +16,7 @@ var campusFinder = {
   },
   // FINDER.COM GETTING CURRENT LOCATION
   getLocation: function(){
-    $('#map-canvas').html('<img src="image/preloader.gif" id="preloader">');  
+    $('#map-canvas').html('<img src="image/preloader.GIF" id="preloader">');  
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
@@ -85,7 +85,7 @@ var campusFinder = {
   },
   // FINDER.COM FOURSQUARE API FUNCTIONALTY FOR CURRENT LOCATION
   fetchRecent:function(event){
-    $('.outputBox').html('<img src="image/preloader.gif" id="preloader">');  
+    $('.outputBox').html('<img src="image/preloader.GIF" id="preloader">');  
     var lat = (campusFinder.currentPosition.latitude);
     var lng = (campusFinder.currentPosition.longitude);
     var LatLng = (lat+", "+lng);
@@ -109,33 +109,13 @@ var campusFinder = {
     })
 
   },
-  //FINDER.COM FOURSQUARE API FUNCTIONALTY FOR ANY SEARCHED ADDRESS 
-  // searchPlaces:function(){
-  //   var la = (results[0].geometry.location.lat());
-  //   var lg = (results[0].geometry.location.lng());
-  //   var LaLg = (la+", "+lg);
-  //   // console.log(lat);
-  //   // console.log(lng);
-  //   var queryme = $(this).parents().attr('id');
-  //   var para = { 
-  //     client_secret: "QWVA0TKCGU404SQEZGSUMBYWC5FB523KQPRTQWG2K3AXF00H",
-  //     client_id: "CTQUBJ0VCHZS5O405Z0G5SCRCWVECGGJ3QKLTRVSRUG2RI0E",
-  //     ll:LaLg,
-  //     radius:"1000",
-  //     v: "20140707",
-  //     query:queryme,
-  //   }
-  //   campusFinder.callback(para);
-  // },
-  // FINDER.COM FOURSQUARE API FUNCTIONALTY FOR CURRENT LOCATION AND HOTELS AROUND
+
   fetchSearch:function(event){
     event.preventDefault();
     geocoder = new google.maps.Geocoder();
     var address = $('#enterBox').val();
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-        alert("Latitude: "+results[0].geometry.location.lat());
-        alert("Longitude: "+results[0].geometry.location.lng());
         var newLat = results[0].geometry.location.lat();
         var newLng = results[0].geometry.location.lng();    
         var mapOptions = {
@@ -198,5 +178,5 @@ var campusFinder = {
     }) 
     $('.outputBox').html(content);  
   } 
-}
+};
 $(document).ready(campusFinder.initialize);
