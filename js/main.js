@@ -16,7 +16,7 @@ var campusFinder = {
   },
   // FINDER.COM GETTING CURRENT LOCATION
   getLocation: function(){
-    $('#map-canvas').html('<img src="image/preloader.gif" id="preloader">');  
+    $('#map-canvas').html('<img src="image/preloader.GIF" id="preloader">');  
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
@@ -85,7 +85,7 @@ var campusFinder = {
   },
   // FINDER.COM FOURSQUARE API FUNCTIONALTY FOR CURRENT LOCATION
   fetchRecent:function(event){
-    $('.outputBox').html('<img src="image/preloader.gif" id="preloader">');  
+    $('.outputBox').html('<img src="image/preloader.GIF" id="preloader">');  
     var lat = (campusFinder.currentPosition.latitude);
     var lng = (campusFinder.currentPosition.longitude);
     var LatLng = (lat+", "+lng);
