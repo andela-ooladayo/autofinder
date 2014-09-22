@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <!--  finder.com reference links  -->
+  <head>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-UVIqIRJeYCEIqUmUnB_iwLGv-gB_e2c&sensor=FALSE&libraries=places"></script>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Paytone+One|Lobster|Droid+Serif|Lobster+Two|Francois+One|Inconsolata|Nunito' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="reset/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>finder.com</title>
+  </head>
+  <!-- finder.com page body -->
+  <body>
+       <!-- finder.com navigation bar -->
+
+     <header>
+        <!-- finder.com navigation bar content -->
+       <div class="navcontent">
+         <img src="image/logo1.png"></img>
+         <h1></h1>
+         <input type="submit" id="submit" value="Search" >
+         <input type="text" id="enterBox" placeholder="search..." title="Enter an address here to find places around">
+         
+         <!-- <div class="advert">
+           
+         </div> -->
+       </div>
+       <!-- finder.com places option bar-->
+       <div class="options">
+         <ul class="result">
+           <li id="food"><a href="#" title="Resturants around">Resturant</a></li>
+           <li id="bank"><a href="#" title="Banks around"> &nbsp;Bank</a></li>
+           <li id="hotel"><a href="#" title="Hotels around">Hotel</a></li>
+           <li id="shop"><a href="#" title="Shops around">Shop</a></li>
+           <li id="school"><a href="#" title="Schools around">School</a></li>
+        </ul>
+       </div>
+     </header>
+
+      <!-- finder.com page section -->
+     <section>
+        <div class="outputBox">
+          <div class="welcome">
+            <p id="note1">"Welcome to the wonderful world of autofinder with advanced features of locating any place in the world, you will definitely have a great experience of using autofinder "</p>
+            <!-- <p id="note2">Click any of the options above to see places around you</br>Enter the address of any place you like to visit and search</br>Zoomout the map to see the route to your destination</br></p> -->
+          </div>
+        </div>
+         <!-- finder.com map container  -->
+        <div id="map-canvas"></div>
+
+        
+        <div class="error"></div>
+     </section>
+      <!-- finder.com footer -->
+     <footer>
+       
+     </footer>
+      <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  
+  </body>
+</html>
